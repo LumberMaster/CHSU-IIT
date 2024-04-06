@@ -182,14 +182,22 @@
   @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
   .wrapper{
-    width: 800px;
-    margin: 0 auto;
+    display: flex; 
+    justify-content: start; 
+    align-items: center;
   }
 
   header {
     height: 100px;
     background: var(--block-color);
     border-bottom: solid 2px var(--main-color);
+  }
+
+
+  header img{
+    height: 80px; 
+    width: 80px; 
+    margin-right: 40px;
   }
 
   h1 {

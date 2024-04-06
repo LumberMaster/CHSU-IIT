@@ -19,15 +19,16 @@
   #content {
     background: var(--primary-color);
     font-family: var(--font);
-    font-size: medium;
+    font-size: small;
     display: flex;
     justify-content: center;
     padding: 10px;
   }
   
   body {
-    margin: 0;
-    padding: 0;
+    overflow-x: hidden;
+    min-width: 100%;
+    max-width: 100%;
   }
   
   .timeline {
@@ -37,32 +38,15 @@
   }
   
   .card {
-    position: relative;
     margin-bottom: 20px;
   }
   
   .card::before {
-    content: "";
-    position: absolute;
-    width: 50%;
+    /* content: ""; */
+    min-width: 50%;
+    max-width: 50%;
   }
-  
 
-  
-  .card:first-child::before {
-    border-top: 0;
-    border-top-left-radius: 0;
-  }
-  
-  .card:last-child:nth-child(odd)::before {
-    border-bottom: 0;
-    border-bottom-left-radius: 0;
-  }
-  
-  .card:last-child:nth-child(even)::before {
-    border-bottom: 0;
-    border-bottom-right-radius: 0;
-  }
   
   .info {
     display: flex;
@@ -74,45 +58,55 @@
   .info h2,h3,h4 {
     color: var(--main-color);
   }
-
+  .info h2, h3{
+    font-size: medium;
+  }
 
 
 
   .info img {
-    box-shadow: 0 0 0 3px var(--main-color), 0 0 7px #333; /* Параметры теней */
+    box-shadow: 0 0 0 2px var(--main-color), 0 0 5px #333; /* Параметры теней */
     padding: 2px;
     width: 90px;
     height: 90px;
     object-fit: cover;
-    border-radius: 999999px;
+    border-radius: 99999px;
   }
 
   .info p {
     
-    padding: 5px;
+    padding: 4px;
 
-  }
-  .info li {
-    
-    text-align: justify;
   }
 
 
   .title-info {
+    display: flex;
     color: var(--main-color);
-    position: relative;
-    margin: 0 30px;
+    padding: 10PX;
   }
-  .content-info {}
   
   .wrapper{
-    width: 100%;
+    min-width: 99%;
+    max-width: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
   }
 
   header {
+    display: flex; 
     height: 100px;
+    min-width: 100%;
+    max-width: 100%;
     background: var(--block-color);
     border-bottom: solid 2px var(--main-color);
+  }
+
+  header img{
+    height: 50px;
+    width: 50px;
+    margin-right: 5px;
   }
 
   h1 {
