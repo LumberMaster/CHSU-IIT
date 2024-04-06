@@ -1,0 +1,121 @@
+@media (min-width: 0px) and (max-width:  992px) 
+{ 
+  :root {
+    --primary-color: #ffffff;
+    --font: arial;
+    --main-color: #624895;
+    --background-color: #111;
+    --font-color: #000000;
+    --block-color: #dedede;
+
+}
+  
+  * {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  #content {
+    background: var(--primary-color);
+    font-family: var(--font);
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .timeline {
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+  }
+  
+
+  
+  .card:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+  }
+  
+  .card:last-child:nth-child(odd)::before {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .card:last-child:nth-child(even)::before {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .info {
+    display: flex;
+    background: var(--block-color);
+    color: var(--font-color);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .info h2,h3,h4 {
+    color: var(--main-color);
+  }
+
+
+
+
+  .info img {
+    box-shadow: 0 0 0 3px var(--main-color), 0 0 7px #333; /* Параметры теней */
+    padding: 2px;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 999999px;
+  }
+
+  .info p {
+    
+    padding: 5px;
+
+  }
+  .info li {
+    
+    text-align: justify;
+  }
+
+
+  .title-info {
+    color: var(--main-color);
+    position: relative;
+    margin: 0 30px;
+  }
+  .content-info {}
+  
+  .wrapper{
+    width: 100%;
+  }
+
+  header {
+    height: 100px;
+    background: var(--block-color);
+    border-bottom: solid 2px var(--main-color);
+  }
+
+  h1 {
+    color: var(--main-color);
+  }
+}
